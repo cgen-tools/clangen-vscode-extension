@@ -32,7 +32,8 @@
                         "greenleaf",
                         "leaffall",
                         "leafbare",
-                        "newleaf"
+                        "newleaf",
+                        "any"
                     ]
                 }
             },
@@ -69,7 +70,7 @@
             },
             "patrol_art_clean": {
                 "description": "If patrol_art contains gore, this line can hold a clean version. The existence of a non-empty string in this parameter marks the patrol art in \"patrol_art\" as explicit.",
-                "type": "array"
+                "type": "string"
             },
             "min_cats": {
                 "description": "Minimum total nunber of cats for this patrol.",
