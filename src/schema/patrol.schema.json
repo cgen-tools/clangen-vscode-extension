@@ -77,7 +77,6 @@
                     "description": "Indicates which cats will die.",
                     "type": "array",
                     "items": {
-                        "type": "array",
                         "enum": [
                             "p_l",
                             "r_c",
@@ -304,16 +303,28 @@
                 "type": "string"
             },
             "success_outcomes": {
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/outcome"
+                }
             },
             "fail_outcomes": {
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/outcome"
+                }
             },
             "antag_success_outcomes": {
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/outcome"
+                }
             },
             "antag_fail_outcomes": {
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/outcome"
+                }
             }
         },
         "required": [
