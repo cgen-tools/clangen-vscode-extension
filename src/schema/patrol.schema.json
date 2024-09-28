@@ -152,7 +152,11 @@
             },
             "pl_skill_constraint": {
                 "description": "Only allow this patrol if the patrol leader (p_l) meets at least one of these skill requirements.",
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "pattern": "^[A-Z]*,[1-4]$"
+                }
             },
             "intro_text": {
                 "description": "The text that displays when the patrol first starts.",
