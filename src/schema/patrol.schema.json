@@ -10,15 +10,23 @@
                     "description": "Which cats are injured.",
                     "type": "array",
                     "items": {
-                        "enum": [
-                            "p_l",
-                            "r_c",
-                            "s_c",
-                            "app1",
-                            "app2",
-                            "patrol",
-                            "multi"
-                        ]    
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "p_l",
+                                    "r_c",
+                                    "s_c",
+                                    "app1",
+                                    "app2",
+                                    "patrol",
+                                    "multi"
+                                ]
+                            },
+                            {
+                                "type": "string",
+                                "pattern": "^n_c:[0-9]$"
+                            }
+                        ]
                     }
                 },
                 "injuries": {
