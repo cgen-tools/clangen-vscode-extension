@@ -83,7 +83,6 @@
             "min_max_status": {
                 "description": "Allows specification of the minimum and maximum number of specific types of cats that are allowed on the patrol.",
                 "type": "object",
-                "minProperties": 1,
                 "propertyNames": {
                     "enum": [
                         "medicine cat",
