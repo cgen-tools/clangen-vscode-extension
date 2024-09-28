@@ -155,6 +155,7 @@
                     "description": "Indicates effect on cat relationships.",
                     "type": "array",
                     "items": {
+                        "$comment": "TODO",
                         "type": "object"
                     }
                 },
@@ -163,6 +164,7 @@
                     "items": {
                         "type": "array",
                         "items": {
+                            "$comment": "TODO",
                             "type": "string"
                         }
                     }
