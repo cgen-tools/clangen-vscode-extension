@@ -8,16 +8,18 @@
             "properties": {
                 "cats": {
                     "description": "Which cats are injured.",
-                    "type": "string",
-                    "enum": [
-                        "p_l",
-                        "r_c",
-                        "s_c",
-                        "app1",
-                        "app2",
-                        "patrol",
-                        "multi"
-                    ]
+                    "type": "array",
+                    "items": {
+                        "enum": [
+                            "p_l",
+                            "r_c",
+                            "s_c",
+                            "app1",
+                            "app2",
+                            "patrol",
+                            "multi"
+                        ]    
+                    }
                 },
                 "injuries": {
                     "description": "Pool of injuries to draw from.",
