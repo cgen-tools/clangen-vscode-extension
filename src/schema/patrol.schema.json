@@ -48,7 +48,12 @@
                 "prey": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "enum": [
+                            "very_small",
+                            "small",
+                            "medium",
+                            "large"
+                        ]
                     }
                 },
                 "herbs": {
