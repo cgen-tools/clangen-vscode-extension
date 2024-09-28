@@ -115,7 +115,40 @@
             },
             "relationship_constraint": {
                 "description": "Only allows patrol if cats meet relationship constraint.",
-                "type": "array"
+                "type": "array",
+                "items": {
+                    "anyOf": [
+                        {
+                            "enum": [
+                                "siblings",
+                                "mates",
+                                "mates_with_pl",
+                                "parent/child",
+                                "child/parent"
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^platonic_(0|[1-9][0-9]?|100)$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^dislike_(0|[1-9][0-9]?|100)$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^comfortable_(0|[1-9][0-9]?|100)$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^jealousy_(0|[1-9][0-9]?|100)$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^trust_(0|[1-9][0-9]?|100)$"
+                        }
+                    ]
+                }
             },
             "pl_skill_constraint": {
                 "description": "Only allow this patrol if the patrol leader (p_l) meets at least one of these skill requirements.",
