@@ -30,8 +30,8 @@
                 "items": { 
                     "enum": [
                         "greenleaf",
-                        "leaffall",
-                        "leafbare",
+                        "leaf-fall",
+                        "leaf-bare",
                         "newleaf",
                         "any"
                     ]
