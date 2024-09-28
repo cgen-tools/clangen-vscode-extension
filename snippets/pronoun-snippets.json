@@ -1,0 +1,66 @@
+{
+    "pronoun_tag_subject_cap": {
+        "prefix": ["They", "She", "He"],
+        "body": ["{PRONOUN/${1:m_c}/subject}$0"]
+    },
+    "pronoun_tag_object_cap": {
+        "prefix": ["Them", "Her", "Him"],
+        "body": ["{PRONOUN/${1:m_c}/object}$0"]
+    },
+    "pronoun_tag_poss_cap": {
+        "prefix": ["Their", "Her", "His"],
+        "body": ["{PRONOUN/${1:m_c}/poss}$0"]
+    },
+    "pronoun_tag_inposs_cap": {
+        "prefix": ["Theirs", "Hers", "His"],
+        "body": ["{PRONOUN/${1:m_c}/inposs}$0"]
+    },
+    "pronoun_tag_self_cap": {
+        "prefix": ["Themself", "Herself", "Himself"],
+        "body": ["{PRONOUN/${1:m_c}/self}$0"]
+    },
+    "pronoun_tag_subject": {
+        "prefix": ["they", "she", "he"],
+        "body": ["{PRONOUN/${1:m_c}/subject}$0"]
+    },
+    "pronoun_tag_object": {
+        "prefix": ["them", "her", "him"],
+        "body": ["{PRONOUN/${1:m_c}/object}$0"]
+    },
+    "pronoun_tag_poss": {
+        "prefix": ["their", "her", "his"],
+        "body": ["{PRONOUN/${1:m_c}/poss}$0"]
+    },
+    "pronoun_tag_inposs": {
+        "prefix": ["theirs", "hers", "his"],
+        "body": ["{PRONOUN/${1:m_c}/inposs}$0"]
+    },
+    "pronoun_tag_self": {
+        "prefix": ["themself", "herself", "himself"],
+        "body": ["{PRONOUN/${1:m_c}/self}$0"]
+    },
+    "pronoun_tag_verbs": {
+        "prefix": ["{VERB"],
+        "body": ["{VERB/${1:m_c}/${2:run}/${3:runs}}$0"]
+    },
+    "pronoun_tag_subject_is": {
+        "prefix": ["they're", "she's", "he's"],
+        "body": ["{PRONOUN/m_c/subject}{VERB/m_c/'re/'s}$0"]
+    },
+    "pronoun_is": {
+        "prefix": ["are", "is"],
+        "body": ["{VERB/${1:m_c}/are/is}$0"]
+    },
+    "pronoun_do_not": {
+        "prefix": ["don't", "doesn't"],
+        "body": ["{VERB/${1:m_c}/don't/doesn't}$0"]
+    },
+    "pronoun_have": {
+        "prefix": ["have", "has"],
+        "body": ["{VERB/${1:m_c}/have/has}$0"]
+    },
+    "pronoun_do": {
+        "prefix": ["do", "does"],
+        "body": ["{VERB/${1:m_c}/do/does}$0"]
+    }
+}

@@ -18,6 +18,12 @@
         "title": "Hello World"
       }
     ],
+    "snippets": [
+      {
+        "language": "json",
+        "path": "./snippets/pronoun-snippets.json"
+      }
+    ],
     "jsonValidation": [
       {
         "url": "./src/schema/patrol.schema.json",
