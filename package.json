@@ -23,11 +23,7 @@
         "url": "./src/schema/patrol.schema.json",
         "fileMatch": [
           "patrols/*.json",
-          "any.json",
-          "greenleaf.json",
-          "leaf-bare.json",
-          "leaf-fall.json",
-          "newleaf.json"
+          "patrols/**/*.json"
         ] 
       }
     ]
