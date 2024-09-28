@@ -199,7 +199,7 @@
                 "type": "array",
                 "items": {
                     "enum": [
-                        "romance",
+                        "romantic",
                         "rom_two_apps",
                         "disaster",
                         "new_cat",
