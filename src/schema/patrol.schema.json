@@ -133,8 +133,12 @@
                     "description": "Name of non-gore outcome-specific art, without file extension (no .png). Adding a clean version of the art marks the normal version as containing gore.",
                     "type": "string"
                 },
-                "outsider_rep": {},
-                "other_clan_rep": {}
+                "outsider_rep": {
+                    "type": "integer"
+                },
+                "other_clan_rep": {
+                    "type": "integer"
+                }
             }
         }
     },
