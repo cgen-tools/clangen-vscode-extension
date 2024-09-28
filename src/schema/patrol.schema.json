@@ -130,7 +130,8 @@
                     }
                 },
                 "injury": {
-                    "description": "Indicates which cats get injured and now."
+                    "description": "Indicates which cats get injured and now.",
+                    "$ref": "#/definitions/injury"
                 },
                 "history_text": {
                     "description": "Controls the history-text for scars and death.",
