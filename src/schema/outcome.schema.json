@@ -91,7 +91,21 @@
         },
         "history_text": {
             "description": "Controls the history-text for scars and death.",
-            "type": "object"
+            "type": "object",
+            "properties": {
+                "reg_death": {
+                    "type": "string",
+                    "description": "Death history text for non-leaders. Whole sentence."
+                },
+                "lead_death": {
+                    "type": "string",
+                    "description": "Death history text for leaders. Sentence fragment."
+                },
+                "scar": {
+                    "type": "string",
+                    "description": "Scar history. Whole sentence."
+                }
+            }
         },
         "relationships": {
             "description": "Indicates effect on cat relationships.",
