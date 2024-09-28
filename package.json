@@ -23,8 +23,9 @@
         "url": "./src/schema/patrol.schema.json",
         "fileMatch": [
           "patrols/*.json",
-          "patrols/**/*.json"
-        ] 
+          "patrols/**/*.json",
+          "!explicit_patrol_art.json"
+        ]
       }
     ]
   },
