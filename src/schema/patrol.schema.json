@@ -104,7 +104,6 @@
                     "description": "Indicates which cats will become lost.",
                     "type": "array",
                     "items": {
-                        "type": "array",
                         "enum": [
                             "p_l",
                             "r_c",
