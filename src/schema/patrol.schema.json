@@ -82,7 +82,29 @@
             },
             "min_max_status": {
                 "description": "Allows specification of the minimum and maximum number of specific types of cats that are allowed on the patrol.",
-                "type": "object"
+                "type": "object",
+                "minProperties": 1,
+                "propertyNames": {
+                    "enum": [
+                        "medicine cat",
+                        "warrior",
+                        "leader",
+                        "deputy",
+                        "apprentice",
+                        "medicine cat apprentice",
+                        "healer cats",
+                        "normal adult",
+                        "all apprentices"
+                    ]
+                },
+                "additionalProperties": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                        "type": "integer"
+                    }
+                }
             },
             "weight": {
                 "description": "Controls how common a patrol is. Normal patrols would be around 20. Lower numbers are less common and higher numbers are more common.",
