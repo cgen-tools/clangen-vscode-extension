@@ -140,7 +140,7 @@
                     }
                 },
                 "injury": {
-                    "description": "Indicates which cats get injured and now.",
+                    "description": "Indicates which cats get injured and how.",
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/injury"
