@@ -391,6 +391,7 @@
         "required": [
             "patrol_id",
             "biome",
+            "season",
             "types",
             "tags",
             "patrol_art",
