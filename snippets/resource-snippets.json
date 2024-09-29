@@ -1,6 +1,6 @@
 {
     "Clangen patrol template": {
-        "prefix": "clangen-patrol-template",
+        "prefix": "clangen-patrol",
         "body": [
             "{",
             "    \"patrol_id\": \"some_unique_id\",",
@@ -39,7 +39,7 @@
         "description": "Clangen patrol template, with all fields."
     },
     "Clangen patrol template (minimal)": {
-        "prefix": "clangen-patrol-template-minimal",
+        "prefix": "clangen-patrol-minimal",
         "body": [
             "{",
             "    \"patrol_id\": \"some_unique_id\",",
@@ -62,7 +62,7 @@
         "description": "Clangen patrol template, with only the required fields."
     },
     "Clangen outcome template": {
-        "prefix": "clangen-patrol-outcome-template",
+        "prefix": "clangen-patrol-outcome",
         "body": [
             "{",
             "  \"text\": \"The raw displayed outcome text.\",",
@@ -123,7 +123,7 @@
         "description": "Clangen outcome template, with all fields."
     },
     "Clangen outcome template (minimal)": {
-        "prefix": "clangen-patrol-outcome-template-minimal",
+        "prefix": "clangen-patrol-outcome-minimal",
         "body": [
             "{",
             "  \"text\": \"The raw displayed outcome text.\",",
