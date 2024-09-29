@@ -40,7 +40,7 @@
         "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/self}$0"]
     },
     "pronoun_tag_verbs": {
-        "prefix": ["{VERB"],
+        "prefix": ["{VERB", "verbtag", "verb-tag"],
         "body": ["{VERB/${1|m_c,r_c,s_c,p_l,n_c|}/${2:run}/${3:runs}}$0"]
     },
     "pronoun_tag_subject_is": {
