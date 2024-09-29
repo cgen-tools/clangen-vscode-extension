@@ -33,8 +33,7 @@
             "    \"fail_outcomes\": [],",
             "    \"antag_success_outcomes\": [],",
             "    \"antag_fail_outcomes\": []",
-            "}",
-            ""
+            "}"
         ],
         "description": "Clangen patrol template, with all fields."
     },
@@ -55,9 +54,8 @@
             "    \"intro_text\": \"The patrol heads out.\",",
             "    \"decline_text\": \"And they head right back!\",",
             "    \"success_outcomes\": [],",
-            "    \"fail_outcomes\": [],",
-            "}",
-            ""
+            "    \"fail_outcomes\": []",
+            "}"
         ],
         "description": "Clangen patrol template, with only the required fields."
     },
