@@ -22,6 +22,10 @@
       {
         "language": "json",
         "path": "./snippets/pronoun-snippets.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/resource-snippets.json"
       }
     ],
     "jsonValidation": [
