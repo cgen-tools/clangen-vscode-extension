@@ -30,7 +30,7 @@
     ],
     "jsonValidation": [
       {
-        "url": "./src/schema/patrol.schema.json",
+        "url": "./schemas/patrol.schema.json",
         "fileMatch": [
           "patrols/*.json",
           "patrols/**/*.json",
