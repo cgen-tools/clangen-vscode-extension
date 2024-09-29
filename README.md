@@ -10,7 +10,7 @@
 
 ---
 ## Acknowledgements
-* The JSON schema and its property descriptions are based on documentation from the [Clangen GitHub Wiki](https://github.com/ClanGenOfficial/clangen/wiki).
+* The JSON schema, its property descriptions, and the `resource-snippets.json` templates are based on documentation from the [Clangen GitHub Wiki](https://github.com/ClanGenOfficial/clangen/wiki).
 
 ---
 ## Following extension guidelines
