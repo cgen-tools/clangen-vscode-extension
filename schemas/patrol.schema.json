@@ -3,52 +3,6 @@
     "description": "A patrol json for Clan Generator.",
     "type": "array",
     "definitions": {
-        "injury": {
-            "type": "object",
-            "properties": {
-                "cats": {
-                    "description": "Which cats are injured.",
-                    "type": "array",
-                    "items": {
-                        "anyOf": [
-                            {
-                                "enum": [
-                                    "p_l",
-                                    "r_c",
-                                    "s_c",
-                                    "app1",
-                                    "app2",
-                                    "patrol",
-                                    "multi"
-                                ]
-                            },
-                            {
-                                "type": "string",
-                                "pattern": "^n_c:[0-9]+$"
-                            }
-                        ]
-                    }
-                },
-                "injuries": {
-                    "description": "Pool of injuries to draw from.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "scars": {
-                    "description": "Pool of scars to draw from in Classic.",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "no_results": {
-                    "description": "True if the injury \"got\" message does not show up in patrol summary.",
-                    "type": "boolean"
-                }
-            }
-        },
         "outcome": {
             "type": "object",
             "properties": {
@@ -144,7 +98,50 @@
                     "description": "Indicates which cats get injured and how.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/injury"
+                        "type": "object",
+                        "properties": {
+                            "cats": {
+                                "description": "Which cats are injured.",
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "p_l",
+                                                "r_c",
+                                                "s_c",
+                                                "app1",
+                                                "app2",
+                                                "patrol",
+                                                "multi"
+                                            ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "^n_c:[0-9]+$"
+                                        }
+                                    ]
+                                }
+                            },
+                            "injuries": {
+                                "description": "Pool of injuries to draw from.",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "scars": {
+                                "description": "Pool of scars to draw from in Classic.",
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            "no_results": {
+                                "description": "True if the injury \"got\" message does not show up in patrol summary.",
+                                "type": "boolean"
+                            }
+                        }
                     }
                 },
                 "history_text": {
