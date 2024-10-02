@@ -24,7 +24,7 @@
                             },
                             {
                                 "type": "string",
-                                "pattern": "^n_c:[0-9]$"
+                                "pattern": "^n_c:[0-9]+$"
                             }
                         ]
                     }
@@ -47,13 +47,14 @@
                     "description": "True if the injury \"got\" message does not show up in patrol summary.",
                     "type": "boolean"
                 }
-            }        
+            }
         },
         "outcome": {
             "type": "object",
             "properties": {
                 "text": {
                     "description": "Displayed outcome text.",
+                    "maxLength": 400,
                     "type": "string"
                 },
                 "exp": {
@@ -168,8 +169,85 @@
                     "description": "Indicates effect on cat relationships.",
                     "type": "array",
                     "items": {
-                        "$comment": "TODO",
-                        "type": "object"
+                        "type": "object",
+                        "properties": {
+                            "cats_from": {
+                                "description": "The cat's whose relationship values are being edited. You are changing how the \"cats_from\" feels.",
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "p_l",
+                                                "r_c",
+                                                "s_c",
+                                                "app1",
+                                                "app2",
+                                                "patrol",
+                                                "clan"
+                                            ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "$n_c:[0-9]+^"
+                                        }
+                                    ]
+                                }
+                            },
+                            "cats_to": {
+                                "description": "The target of the relationship. You are changing how \"cats_from\" feels about \"cats_to\".",
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "p_l",
+                                                "r_c",
+                                                "s_c",
+                                                "app1",
+                                                "app2",
+                                                "patrol",
+                                                "clan"
+                                            ]
+                                        },
+                                        {
+                                            "type": "string",
+                                            "pattern": "$n_c:[0-9]+^"
+                                        }
+                                    ]
+                                }
+                            },
+                            "mutual": {
+                                "description": "Controls if the relation effect will be applied in both directions.",
+                                "type": "boolean"
+                            },
+                            "values": {
+                                "description": "Controls which relationship values are affected.",
+                                "type": "array",
+                                "items": {
+                                    "enum": [
+                                        "romantic",
+                                        "platonic",
+                                        "dislike",
+                                        "comfort",
+                                        "jealous",
+                                        "trust",
+                                        "respect"
+                                    ]
+                                }
+                            },
+                            "amount": {
+                                "description": "Exact amount the relationship value will be affected. Can be positive or negative.",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "cats_from",
+                            "cats_to",
+                            "values",
+                            "amount"
+                        ]
+                        
                     }
                 },
                 "new_cat": {
@@ -357,11 +435,13 @@
             },
             "intro_text": {
                 "description": "The text that displays when the patrol first starts.",
-                "type": "string"
+                "type": "string",
+                "maxLength": 400
             },
             "decline_text": {
                 "description": "The text that displays if the patrol is declined (do not proceed)",
-                "type": "string"
+                "type": "string",
+                "maxLength": 400
             },
             "success_outcomes": {
                 "type": "array",
