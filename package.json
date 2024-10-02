@@ -36,6 +36,12 @@
           "patrols/**/*.json",
           "!explicit_patrol_art.json"
         ]
+      },
+      {
+        "url": "./schemas/thought.schema.json",
+        "fileMatch": [
+          "thoughts/**/*.json"
+        ]
       }
     ]
   },
