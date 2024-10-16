@@ -1,6 +1,6 @@
 {
     "title": "Clangen Patrol Schema",
-    "description": "A patrol json for Clan Generator.",
+    "description": "Patrols in Clan Generator.",
     "type": "array",
     "definitions": {
         "outcome": {
