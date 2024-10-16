@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json-schema.org/draft-07/schema",
     "title": "Clangen Short Event Schema",
     "description": "Short moonskip events in Clan Generator.",
     "type": "array",
