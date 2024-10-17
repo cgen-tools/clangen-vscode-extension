@@ -22,8 +22,6 @@ export async function activate(context: vscode.ExtensionContext) {
     patrolArtNames = patrolArtPaths.map((value) => path.parse(value.fsPath).name);
   }
 
-  console.log(patrolArtNames);
-
   const patrolArtAutocompleteProvider = vscode.languages.registerCompletionItemProvider('json', {
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
       if (token.isCancellationRequested) {
