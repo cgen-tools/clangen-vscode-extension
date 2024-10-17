@@ -33,7 +33,7 @@ export async function activate(context: vscode.ExtensionContext) {
       item.documentation = createPatrolArtMarkdownString(item.label.toString(), folder);
       return item;
     }
-  });
+  }, '"');
 
   context.subscriptions.push(patrol_art_autocomplete_provider);
 
