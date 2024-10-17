@@ -24,7 +24,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
   console.log(patrolArtNames);
 
-  const patrol_art_autocomplete_provider = vscode.languages.registerCompletionItemProvider('json', {
+  const patrolArtAutocompleteProvider = vscode.languages.registerCompletionItemProvider('json', {
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
       if (token.isCancellationRequested) {
         return;
@@ -43,7 +43,7 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   }, '"');
 
-  context.subscriptions.push(patrol_art_autocomplete_provider);
+  context.subscriptions.push(patrolArtAutocompleteProvider);
 
 }
 
