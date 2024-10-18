@@ -23,6 +23,26 @@ export async function activate(context: vscode.ExtensionContext) {
     patrolArtNames = patrolArtPaths.map((value) => path.parse(value.fsPath).name);
   }
 
+  const patrolArtHoverProvider = vscode.languages.registerHoverProvider('json', {
+      provideHover(document, position, token) {
+        if (token.isCancellationRequested) {
+          return;
+        }
+
+        const location = getLocation(document.getText(), document.offsetAt(position));
+        const property = location.path.pop();
+        if (property === 'patrol_art' || property === 'patrol_art_clean' || property === 'art') {
+          const wordRange = document.getWordRangeAtPosition(position);
+          const patrolArtWord = document.getText(wordRange);
+
+          if (patrolArtNames.includes(patrolArtWord)) {
+            return new vscode.Hover(createPatrolArtMarkdownString(patrolArtWord, folder), wordRange);
+          }
+        }
+        return undefined;
+      },
+  });
+
   const patrolArtAutocompleteProvider = vscode.languages.registerCompletionItemProvider('json', {
     provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
       if (token.isCancellationRequested) {
@@ -47,7 +67,7 @@ export async function activate(context: vscode.ExtensionContext) {
     }
   }, '"');
 
-  context.subscriptions.push(patrolArtAutocompleteProvider);
+  context.subscriptions.push(patrolArtAutocompleteProvider, patrolArtHoverProvider);
 
 }
 
