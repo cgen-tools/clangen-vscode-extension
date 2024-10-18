@@ -51,7 +51,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
       const location = getLocation(document.getText(), document.offsetAt(position));
       const property = location.path.pop();
-      if (property === 'patrol_art' || property === 'patrol_art_clean') {
+      if (property === 'patrol_art' || property === 'patrol_art_clean' || property === 'art') {
         return patrolArtNames.map((value) => new vscode.CompletionItem(value), vscode.CompletionItemKind.Value);
       }
       return undefined;
