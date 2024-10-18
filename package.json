@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "*"
+    "onLanguage:json"
   ],
   "main": "./dist/extension.js",
   "contributes": {
