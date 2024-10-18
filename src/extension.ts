@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import path from 'path';
+import { getLocation } from 'jsonc-parser';
 
 function createPatrolArtMarkdownString(patrolArtName: string, folder: vscode.WorkspaceFolder|undefined): vscode.MarkdownString {
   if (folder) {
@@ -28,7 +29,12 @@ export async function activate(context: vscode.ExtensionContext) {
         return;
       }
 
-      return patrolArtNames.map((value) => new vscode.CompletionItem(value), vscode.CompletionItemKind.Value);
+      const location = getLocation(document.getText(), document.offsetAt(position));
+      const property = location.path.pop();
+      if (property === 'patrol_art' || property === 'patrol_art_clean') {
+        return patrolArtNames.map((value) => new vscode.CompletionItem(value), vscode.CompletionItemKind.Value);
+      }
+      return undefined;
     },
 
     resolveCompletionItem(item, token) {
