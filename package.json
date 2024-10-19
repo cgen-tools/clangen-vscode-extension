@@ -3,6 +3,7 @@
   "displayName": "clangen-vscode-extension",
   "description": "Extension to help with development for video game Clan Generator.",
   "version": "0.0.1",
+  "license": "MPL-2.0",
   "engines": {
     "vscode": "^1.93.0"
   },
