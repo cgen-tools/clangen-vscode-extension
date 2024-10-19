@@ -1,0 +1,29 @@
+name: Build .vsix file
+
+on:
+  push:
+    tags:
+        - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+    
+    - name: Install vsce
+      run: npm install -g @vscode/vsce
+
+    - name: Build
+      run: vsce package -o clangen-vscode-extension.vsix
+
+    - name: Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: clangen-vscode-extension.vsix
