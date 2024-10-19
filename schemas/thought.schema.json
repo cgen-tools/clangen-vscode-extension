@@ -46,7 +46,7 @@
         }
       },
       "has_injuries": {
-        "description": "Constraints the thought to only occur if m_c (the cat that is thinking the thought) or r_c (the cat that is being thought about) has a certain condition (either illness or injury). Can also use \"any\" to allow the thought to occur if the cat has any illness or injury.",
+        "description": "Constrains the thought to only occur if m_c (the cat that is thinking the thought) or r_c (the cat that is being thought about) has a certain condition (either illness or injury). Can also use \"any\" to allow the thought to occur if the cat has any illness or injury.",
         "type": "object",
         "properties": {
           "m_c": {
@@ -64,7 +64,7 @@
         }
       },
       "perm_conditions": {
-        "description": "Constraints the thought to only occur if m_c (the cat that is thinking the thought) or r_c (the cat that is being thought about) has a certain permanent condition. Can also use \"any\" to allow the thought to occur if the cat has any permanent condition.",
+        "description": "Constrains the thought to only occur if m_c (the cat that is thinking the thought) or r_c (the cat that is being thought about) has a certain permanent condition. Can also use \"any\" to allow the thought to occur if the cat has any permanent condition.",
         "type": "object",
         "properties": {
           "m_c": {
