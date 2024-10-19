@@ -36,7 +36,7 @@
           }
         },
         "can_have_stat": {
-          "description": "Overrides default bejaviour or adds additional requirements for stat_cat picking.",
+          "description": "Overrides default behavior or adds additional requirements for stat_cat picking.",
           "type": "array",
           "items": {
             "enum": [
