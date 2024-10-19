@@ -384,6 +384,10 @@
             },
             {
               "type": "string",
+              "pattern": "^romantic_(0|[1-9][0-9]?|100)$"
+            },
+            {
+              "type": "string",
               "pattern": "^platonic_(0|[1-9][0-9]?|100)$"
             },
             {
@@ -401,6 +405,10 @@
             {
               "type": "string",
               "pattern": "^trust_(0|[1-9][0-9]?|100)$"
+            },
+            {
+              "type": "string",
+              "pattern": "^admiration_(0|[1-9][0-9]?|100)$"
             }
           ]
         }
