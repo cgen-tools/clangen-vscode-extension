@@ -295,6 +295,26 @@
         "rebellious"
       ]
     },
+    "kit_trait": {
+      "enum": [
+        "unruly",
+        "shy",
+        "impulsive",
+        "bullying",
+        "attention-seeker",
+        "daydreamer",
+        "charming",
+        "fearless",
+        "skittish",
+        "quiet",
+        "self-conscious",
+        "know-it-all",
+        "sweet",
+        "polite",
+        "bossy",
+        "noisy"
+      ]
+    },
     "skill": {
       "type": "string",
       "pattern": "^[A-Z]+,[0-4]$"
