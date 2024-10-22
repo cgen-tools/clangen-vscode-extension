@@ -296,8 +296,8 @@
       ]
     },
     "skill": {
-      "$comment": "TODO",
-      "type": "string"
+      "type": "string",
+      "pattern": "^[A-Z]+,[0-4]$"
     },
     "herb": {
       "enum": [
