@@ -183,14 +183,14 @@
         "description": "Constrains the thought to only happen if m_c has a specific trait.",
         "type": "array",
         "items": {
-          "$ref": "common.schema.json#/definitions/trait"
+          "$ref": "common.schema.json#/definitions/all_trait"
         }
       },
       "random_trait_constraint": {
         "description": "Constrains the thought to only happen if r_c has a specific trait.",
         "type": "array",
         "items": {
-          "$ref": "common.schema.json#/definitions/trait"
+          "$ref": "common.schema.json#/definitions/all_trait"
         }
       },
       "main_skill_constraint": {
