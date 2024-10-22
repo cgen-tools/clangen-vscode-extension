@@ -315,6 +315,16 @@
         "noisy"
       ]
     },
+    "all_trait": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/trait"
+        },
+        {
+          "$ref": "#/definitions/kit_trait"
+        }
+      ]
+    },
     "skill": {
       "type": "string",
       "pattern": "^[A-Z]+,[0-4]$"
