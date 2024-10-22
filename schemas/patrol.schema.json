@@ -68,14 +68,14 @@
           "description": "Indicates which cats will become lost.",
           "type": "array",
           "items": {
-            "enum": ["p_l", "r_c", "s_c", "app1", "app2", "patrol", "multi"]
+            "$ref": "common.schema.json#/definitions/gather_cat"
           }
         },
         "dead_cats": {
           "description": "Indicates which cats will die.",
           "type": "array",
           "items": {
-            "enum": ["p_l", "r_c", "s_c", "app1", "app2", "patrol", "multi"]
+            "$ref": "common.schema.json#/definitions/gather_cat"
           }
         },
         "injury": {
@@ -88,23 +88,7 @@
                 "description": "Which cats are injured.",
                 "type": "array",
                 "items": {
-                  "anyOf": [
-                    {
-                      "enum": [
-                        "p_l",
-                        "r_c",
-                        "s_c",
-                        "app1",
-                        "app2",
-                        "patrol",
-                        "multi"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "pattern": "^n_c:[0-9]+$"
-                    }
-                  ]
+                  "$ref": "common.schema.json#/definitions/gather_cat"
                 }
               },
               "injuries": {
@@ -163,46 +147,14 @@
                 "description": "The cat's whose relationship values are being edited. You are changing how the \"cats_from\" feels.",
                 "type": "array",
                 "items": {
-                  "anyOf": [
-                    {
-                      "enum": [
-                        "p_l",
-                        "r_c",
-                        "s_c",
-                        "app1",
-                        "app2",
-                        "patrol",
-                        "clan"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "pattern": "^n_c:[0-9]+$"
-                    }
-                  ]
+                  "$ref": "common.schema.json#/definitions/gather_cat"
                 }
               },
               "cats_to": {
                 "description": "The target of the relationship. You are changing how \"cats_from\" feels about \"cats_to\".",
                 "type": "array",
                 "items": {
-                  "anyOf": [
-                    {
-                      "enum": [
-                        "p_l",
-                        "r_c",
-                        "s_c",
-                        "app1",
-                        "app2",
-                        "patrol",
-                        "clan"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "pattern": "^n_c:[0-9]+$"
-                    }
-                  ]
+                  "$ref": "common.schema.json#/definitions/gather_cat"
                 }
               },
               "mutual": {
