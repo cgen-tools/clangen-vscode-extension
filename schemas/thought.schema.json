@@ -3,6 +3,41 @@
   "title": "Clangen Thought Schema",
   "description": "Thoughts in Clan Generator.",
   "type": "array",
+  "definitions": {
+    "perm_condition_any": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/perm_condition"
+        },
+        {
+          "const": "any"
+        }
+      ]
+    },
+    "illness_injury_any": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/illness"
+        },
+        {
+          "$ref": "common.schema.json#/definitions/injury"
+        },
+        {
+          "const": "any"
+        }
+      ]
+    },
+    "status_any": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/status"
+        },
+        {
+          "const": "any"
+        }
+      ]
+    }
+  },
   "items": {
     "type": "object",
     "properties": {
@@ -52,13 +87,13 @@
           "m_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/definitions/illness_injury_any"
             }
           },
           "r_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/definitions/illness_injury_any"
             }
           }
         }
@@ -70,13 +105,13 @@
           "m_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/definitions/perm_condition_any"
             }
           },
           "r_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "#/definitions/perm_condition_any"
             }
           }
         }
@@ -105,13 +140,13 @@
           "m_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "common.schema.json#/definitions/backstory"
             }
           },
           "r_c": {
             "type": "array",
             "items": {
-              "type": "string"
+              "$ref": "common.schema.json#/definitions/backstory"
             }
           }
         }
@@ -120,56 +155,56 @@
         "description": "Constrains the thought to only happen if m_c is in a certain role.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "#/definitions/status_any"
         }
       },
       "random_status_constraint": {
         "description": "Constrains the thought to only happen if r_c is in a certain role.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "#/definitions/status_any"
         }
       },
       "main_age_constraint": {
         "description": "Constrains the thought to only happen if m_c is within a certain age group.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/age"
         }
       },
       "random_age_constraint": {
         "description": "Constrains the thought to only happen if r_c is within a certain age group.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/age"
         }
       },
       "main_trait_constraint": {
         "description": "Constrains the thought to only happen if m_c has a specific trait.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/trait"
         }
       },
       "random_trait_constraint": {
         "description": "Constrains the thought to only happen if r_c has a specific trait.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/trait"
         }
       },
       "main_skill_constraint": {
         "description": "Constrains the thought to only happen if m_c has a specific skill.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/skill"
         }
       },
       "random_skill_constraint": {
         "description": "Constrains the thought to only happen if r_c has a specific skill.",
         "type": "array",
         "items": {
-          "type": "string"
+          "$ref": "common.schema.json#/definitions/skill"
         }
       },
       "random_living_status": {
