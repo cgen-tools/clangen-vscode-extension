@@ -75,7 +75,14 @@
           "description": "Indicates which cats will die.",
           "type": "array",
           "items": {
-            "$ref": "common.schema.json#/definitions/gather_cat"
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/gather_cat"
+              },
+              {
+                "enum": ["some_lives", "all_lives"]
+              }
+            ]
           }
         },
         "injury": {
