@@ -454,7 +454,7 @@
             "description": "The reputation the Clan must have in order for this event to be possible.",
             "type": "array",
             "items": {
-              "enum": ["hostile", "neutral", "welcoming", "any"]
+              "enum": ["hostile", "neutral", "ally", "any"]
             }
           },
           "changed": {
