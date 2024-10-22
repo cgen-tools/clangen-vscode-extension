@@ -61,7 +61,14 @@
         "herbs": {
           "type": "array",
           "items": {
-            "$ref": "common.schema.json#/definitions/herb"
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/herb"
+              },
+              {
+                "enum": ["random_herbs", "many_herbs"]
+              }
+            ]
           }
         },
         "lost_cats": {
