@@ -176,14 +176,23 @@
         "description": "Constrains the thought if r_c has a specific place of death.",
         "type": "array",
         "items": {
-          "type": "string"
+          "enum": [
+            "living",
+            "darkforest",
+            "starclan",
+            "unknownresidence"
+          ]
         }
       },
       "random_outside_status": {
         "description": "Constrains the thought if r_c has a specific outside role.",
         "type": "array",
         "items": {
-          "type": "string"
+          "enum": [
+            "lost",
+            "outside",
+            "clancat"
+          ]
         }
       }
     }
