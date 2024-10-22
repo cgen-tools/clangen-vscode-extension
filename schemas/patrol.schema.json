@@ -25,14 +25,14 @@
           "description": "Makes this a stat outcome which can occur if a stat cat to be found.",
           "type": "array",
           "items": {
-            "type": "string"
+            "$ref": "common.schema.json#/definitions/skill"
           }
         },
         "stat_trait": {
           "description": "Makes this a stat outcome which can occur if a stat cat to be found.",
           "type": "array",
           "items": {
-            "type": "string"
+            "$ref": "common.schema.json#/definitions/trait"
           }
         },
         "can_have_stat": {
@@ -61,7 +61,7 @@
         "herbs": {
           "type": "array",
           "items": {
-            "type": "string"
+            "$ref": "common.schema.json#/definitions/herb"
           }
         },
         "lost_cats": {
@@ -111,14 +111,21 @@
                 "description": "Pool of injuries to draw from.",
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "anyOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/injury"
+                    },
+                    {
+                      "$ref": "common.schema.json#/definitions/illness"
+                    }
+                  ]
                 }
               },
               "scars": {
                 "description": "Pool of scars to draw from in Classic.",
                 "type": "array",
                 "items": {
-                  "type": "string"
+                  "$ref": "common.schema.json#/definitions/scar"
                 }
               },
               "no_results": {
@@ -228,11 +235,7 @@
         "new_cat": {
           "type": "array",
           "items": {
-            "type": "array",
-            "items": {
-              "$comment": "TODO",
-              "type": "string"
-            }
+            "$ref": "common.schema.json#/definitions/new_cat"
           }
         },
         "art": {
