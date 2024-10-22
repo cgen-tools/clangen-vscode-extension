@@ -3,18 +3,6 @@
   "title": "Clangen Short Event Schema",
   "description": "Short moonskip events in Clan Generator.",
   "type": "array",
-  "definitions": {
-    "all_trait": {
-      "anyOf": [
-        {
-          "$ref": "common.schema.json#/definitions/trait"
-        },
-        {
-          "$ref": "common.schema.json#/definitions/kit_trait"
-        }
-      ]
-    }
-  },
   "items": {
     "type": "object",
     "properties": {
@@ -199,7 +187,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/definitions/all_trait"
+                  "$ref": "common.schema.json#/definitions/all_trait"
                 },
                 {
                   "const": "any"
@@ -211,7 +199,7 @@
             "description": "m_c cannot possess any of the traits on this list.",
             "type": "array",
             "items": {
-              "$ref": "#/definitions/all_trait"
+              "$ref": "common.schema.json#/definitions/all_trait"
             }
           },
           "backstory": {
@@ -324,7 +312,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/definitions/all_trait"
+                  "$ref": "common.schema.json#/definitions/all_trait"
                 },
                 {
                   "type": "string",
@@ -337,7 +325,7 @@
             "description": "r_c cannot possess any of the traits on this list.",
             "type": "array",
             "items": {
-              "$ref": "#/definitions/all_trait"
+              "$ref": "common.schema.json#/definitions/all_trait"
             }
           },
           "backstory": {
