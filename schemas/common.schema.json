@@ -123,7 +123,8 @@
         "big_bite_injury",
         "small_bite_injury",
         "beak_bite",
-        "rat_bite"
+        "rat_bite",
+        "sickness"
       ]
     },
     "perm_condition": {
@@ -295,7 +296,8 @@
       ]
     },
     "skill": {
-      "$comment": "TODO"
+      "$comment": "TODO",
+      "type": "string"
     },
     "herb": {
       "enum": [
@@ -323,7 +325,9 @@
         "goldenrod",
         "poppy",
         "plantain",
-        "catmint"
+        "catmint",
+        "random_herbs",
+        "many_herbs"
       ]
     }
   }
