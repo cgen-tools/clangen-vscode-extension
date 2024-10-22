@@ -377,6 +377,7 @@
               "enum": [
                 "siblings",
                 "mates",
+                "not_mates",
                 "mates_with_pl",
                 "parent/child",
                 "child/parent"
