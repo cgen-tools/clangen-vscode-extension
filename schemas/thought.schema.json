@@ -133,22 +133,16 @@
           ]
         }
       },
-      "backstory_constraint": {
-        "description": "Constrains the thought to only occur if m_c or r_c has the specific listed backstory.",
-        "type": "object",
-        "properties": {
-          "m_c": {
-            "type": "array",
-            "items": {
-              "$ref": "common.schema.json#/definitions/backstory"
-            }
-          },
-          "r_c": {
-            "type": "array",
-            "items": {
-              "$ref": "common.schema.json#/definitions/backstory"
-            }
-          }
+      "main_backstory_constraint": {
+        "type": "array",
+        "items": {
+          "$ref": "common.schema.json#/definitions/backstory"
+        }
+      },
+      "random_backstory_constraint": {
+        "type": "array",
+        "items": {
+          "$ref": "common.schema.json#/definitions/backstory"
         }
       },
       "main_status_constraint": {
