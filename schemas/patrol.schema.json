@@ -357,7 +357,9 @@
                 "not_mates",
                 "mates_with_pl",
                 "parent/child",
-                "child/parent"
+                "child/parent",
+                "mentor/app",
+                "app/mentor"
               ]
             },
             {
