@@ -444,8 +444,7 @@
             "description": "How the reputation of the Clan changes as a result of this event",
             "type": "integer"
           }
-        },
-        "required": ["current_rep", "changed"]
+        }
       },
       "other_clan": {
         "description": "Dictates what reputation the clan is required to have with the other clan as well as how that reputation changes due to the event.",
