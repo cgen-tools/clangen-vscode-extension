@@ -43,6 +43,16 @@
         "fileMatch": [
           "thoughts/**/*.json"
         ]
+      },
+      {
+        "url": "./schemas/shortevent.schema.json",
+        "fileMatch": [
+          "events/death/*.json",
+          "events/disasters/*.json",
+          "events/injury/*.json",
+          "events/misc/*.json",
+          "events/new_cat/*.json"
+        ]
       }
     ]
   },
