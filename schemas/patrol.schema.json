@@ -117,6 +117,9 @@
                       "$ref": "common.schema.json#/definitions/illness"
                     },
                     {
+                      "$ref": "common.schema.json#/definitions/perm_condition"
+                    },
+                    {
                       "const": "non_lethal"
                     }
                   ]
