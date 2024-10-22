@@ -108,6 +108,9 @@
                     },
                     {
                       "$ref": "common.schema.json#/definitions/illness"
+                    },
+                    {
+                      "const": "non_lethal"
                     }
                   ]
                 }
