@@ -19,20 +19,24 @@
       },
       "season": {
         "description": "List of seasons in which the event may occur.",
-        "enum": ["greenleaf", "leaf-fall", "leaf-bare", "newleaf", "any"]
+        "items": {
+          "enum": ["greenleaf", "leaf-fall", "leaf-bare", "newleaf", "any"]
+        }
       },
       "sub_type": {
         "description": "List of subtypes for this event.",
-        "enum": [
-          "war",
-          "murder",
-          "old_age",
-          "mass_death",
-          "adoption",
-          "murder_reveal",
-          "accessory",
-          "ceremony"
-        ]
+        "items": {
+          "enum": [
+            "war",
+            "murder",
+            "old_age",
+            "mass_death",
+            "adoption",
+            "murder_reveal",
+            "accessory",
+            "ceremony"
+          ]  
+        }
       },
       "tags": {
         "description": "Used for some filtering purposes",
@@ -220,7 +224,14 @@
             "description": "List of ages r_c can be. If they can be anything, use \"any\".",
             "type": "array",
             "items": {
-              "$ref": "common.schema.json#/definitions/age"
+              "anyOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/age"
+                },
+                {
+                  "const": "any"
+                }
+              ]
             }
           },
           "status": {
@@ -301,7 +312,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "common.schema.json#/definitions/skill"
+                  "$ref": "common.schema.json#/definitions/trait"
                 },
                 {
                   "type": "string",
@@ -339,35 +350,37 @@
         }
       },
       "injury": {
-        "type": "object",
-        "properties": {
-          "cats": {
-            "description": "Which cats are injured.",
-            "type": "array",
-            "items": {
-              "anyOf": [
-                {
-                  "enum": ["m_c", "r_c"]
-                },
-                {
-                  "type": "string",
-                  "pattern": "^n_c:[0-9]+$"
-                }
-              ]
-            }
-          },
-          "injuries": {
-            "description": "Pool of injuries to draw from.",
-            "type": "array",
-            "items": {
-              "$ref": "common.schema.json#/definitions/injury"
-            }
-          },
-          "scars": {
-            "description": "Pool of scars to draw from. If in classic mode, a scar is chosen from this pool to be given instead of an injury. If in expanded mode, a scar is chosen from this pool to possibly be given upon healing their injury.",
-            "type": "array",
-            "items": {
-              "$ref": "common.schema.json#/definitions/scar"
+        "type": "array",
+        "items": {
+          "properties": {
+            "cats": {
+              "description": "Which cats are injured.",
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "enum": ["m_c", "r_c"]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^n_c:[0-9]+$"
+                  }
+                ]
+              }
+            },
+            "injuries": {
+              "description": "Pool of injuries to draw from.",
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/definitions/injury"
+              }
+            },
+            "scars": {
+              "description": "Pool of scars to draw from. If in classic mode, a scar is chosen from this pool to be given instead of an injury. If in expanded mode, a scar is chosen from this pool to possibly be given upon healing their injury.",
+              "type": "array",
+              "items": {
+                "$ref": "common.schema.json#/definitions/scar"
+              }
             }
           }
         }
@@ -469,7 +482,7 @@
               "anyOf": [
                 {
                   "enum": [
-                    "reduce_eight",
+                    "reduce_eighth",
                     "reduce_quarter",
                     "reduce_half",
                     "reduce_full"
