@@ -1,43 +1,23 @@
 {
-    "pronoun_tag_subject_cap": {
-        "prefix": ["They", "She", "He"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/subject}$0"]
-    },
-    "pronoun_tag_object_cap": {
-        "prefix": ["Them", "Her", "Him"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/object}$0"]
-    },
-    "pronoun_tag_poss_cap": {
-        "prefix": ["Their", "Her", "His"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/poss}$0"]
-    },
-    "pronoun_tag_inposs_cap": {
-        "prefix": ["Theirs", "Hers", "His"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/inposs}$0"]
-    },
-    "pronoun_tag_self_cap": {
-        "prefix": ["Themself", "Herself", "Himself"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/self}$0"]
-    },
     "pronoun_tag_subject": {
         "prefix": ["they", "she", "he"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/subject}$0"]
+        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/subject${2|},/CAP}|}$0"]
     },
     "pronoun_tag_object": {
         "prefix": ["them", "her", "him"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/object}$0"]
+        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/object${2|},/CAP}|}$0"]
     },
     "pronoun_tag_poss": {
         "prefix": ["their", "her", "his"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/poss}$0"]
+        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/poss${2|},/CAP}|}$0"]
     },
     "pronoun_tag_inposs": {
         "prefix": ["theirs", "hers", "his"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/inposs}$0"]
+        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/inposs${2|},/CAP}|}$0"]
     },
     "pronoun_tag_self": {
         "prefix": ["themself", "herself", "himself"],
-        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|}/self}$0"]
+        "body": ["{PRONOUN/${1|m_c,r_c,s_c,p_l,n_c|/self${2|},/CAP}|}$0"]
     },
     "pronoun_tag_verbs": {
         "prefix": ["{VERB", "verbtag", "verb-tag"],
@@ -45,7 +25,7 @@
     },
     "pronoun_tag_subject_is": {
         "prefix": ["they're", "she's", "he's"],
-        "body": ["{PRONOUN/m_c/subject}{VERB/m_c/'re/'s}$0"]
+        "body": ["{PRONOUN/m_c/subject${2|},/CAP}|}{VERB/m_c/'re/'s}$0"]
     },
     "pronoun_is": {
         "prefix": ["are", "is"],
