@@ -126,7 +126,7 @@
                 }
               },
               "scars": {
-                "description": "Pool of scars to draw from in Classic.",
+                "description": "Pool of scars to draw from in Classic. Currently non-functional.",
                 "type": "array",
                 "items": {
                   "$ref": "common.schema.json#/definitions/scar"
