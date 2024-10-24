@@ -9,7 +9,6 @@
       "properties": {
         "text": {
           "description": "Displayed outcome text.",
-          "maxLength": 400,
           "type": "string"
         },
         "weight": {
@@ -402,13 +401,11 @@
       },
       "intro_text": {
         "description": "The text that displays when the patrol first starts.",
-        "type": "string",
-        "maxLength": 400
+        "type": "string"
       },
       "decline_text": {
         "description": "The text that displays if the patrol is declined (do not proceed)",
-        "type": "string",
-        "maxLength": 400
+        "type": "string"
       },
       "success_outcomes": {
         "type": "array",
