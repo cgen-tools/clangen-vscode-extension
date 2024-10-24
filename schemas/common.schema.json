@@ -384,7 +384,7 @@
     },
     "skill": {
       "type": "string",
-      "pattern": "^[A-Z]+,[0-4]$"
+      "pattern": "^[A-Z]+,\\s*[0-4]$"
     },
     "herb": {
       "enum": [
